@@ -14,20 +14,7 @@
         efi.canTouchEfiVariables = true;
     };
 
-  #hardware, bluetooth
-    hardware = {
-        bluetooth = {
-            enable = true; # enables support for Bluetooth
-            powerOnBoot = true; # powers up the default Bluetooth controller on boot
-        };
-    };
 
-  # Define your hostname.
-    networking = {
-        hostName = "desktop";
-        networkmanager.enable = true;
-        firewall.enable = false;
-    };
 
   # Set your time zone.
     time.timeZone = "America/Halifax";
@@ -91,6 +78,8 @@
       # Deduplicate and optimize nix store
       auto-optimise-store = true;
     };
+
+    system.stateVersion = "23.05"; # Did you read the comment?
 
   }
 
