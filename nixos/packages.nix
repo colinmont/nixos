@@ -18,7 +18,7 @@
     wget
     git
     cifs-utils
-    obsidian
+   # obsidian
     gparted
     kcalc
     krdc
