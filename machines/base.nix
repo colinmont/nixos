@@ -8,13 +8,12 @@
         EDITOR = "nvim";
         };
     };
+
     # Bootloader.
     boot.loader = {
         systemd-boot.enable = true;
         efi.canTouchEfiVariables = true;
     };
-
-
 
   # Set your time zone.
     time.timeZone = "America/Halifax";

@@ -1,25 +1,16 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
+ { config, pkgs, ... }:
 
-{ config, pkgs, inputs, lib, ... }:
-
-{
+ {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./base.nix
-      ./packages.nix
     ];
 
-      # Define your hostname.
     networking = {
-        hostName = "desktop";
-        networkmanager.enable = true;
-        firewall.enable = false;
+      hostName = "go";
+      networkmanager.enable = true;
+      firewall.enable = false;
     };
-
-
  environment.systemPackages = with pkgs; [
      #office
     kate
@@ -34,27 +25,24 @@
     #utils
     neovim
     wget
+
     cifs-utils
    # obsidian
     gparted
     kcalc
     krdc
     htop
-    git
     btrfs-progs
     gh
 
     #web
     fluffychat
     firefox
-    ungoogled-chromium
-    deluge
+
 
   ];
 
       programs = {
-        #steam
-        steam.enable = true;
 
         neovim = {
             enable = true;
@@ -62,4 +50,4 @@
         };
 
     };
-}
+  }
