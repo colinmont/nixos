@@ -10,14 +10,14 @@
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # hardware.url = "github:nixos/nixos-hardware";
-
+    hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    hardware,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -40,6 +40,7 @@
           ./machines/go/go.nix
           ./modules/bluetooth.nix
           ./machines/base.nix
+          hardware.nixosModules.microsoft-surface-go
         ];
       };
     };
