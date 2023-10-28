@@ -41,6 +41,7 @@
           ./modules/bluetooth.nix
           ./machines/base.nix
           hardware.nixosModules.microsoft-surface-go
+          hardware.nixosModules.microsoft-surface-common
         ];
       };
     };
