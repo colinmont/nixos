@@ -33,7 +33,7 @@
     krdc
     htop
     btrfs-progs
-    gh
+    git
 
     #web
     fluffychat
