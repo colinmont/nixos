@@ -40,6 +40,7 @@
           ./machines/go/go.nix
           ./modules/bluetooth.nix
           ./machines/base.nix
+          hardware.nixModules.microsoft-surface-go
         ];
       };
     };
