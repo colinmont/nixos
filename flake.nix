@@ -31,6 +31,8 @@
           ./machines/desktop/desktop.nix
           ./modules/bluetooth.nix
           ./machines/base.nix
+          hardware.nixosModules.common-gpu-amd
+          hardware.nixosModules.common-cpu-amd
         ];
       };
 
@@ -40,7 +42,7 @@
           ./machines/go/go.nix
           ./modules/bluetooth.nix
           ./machines/base.nix
-          hardware.nixModules.microsoft-surface-go
+          hardware.nixosModules.microsoft-surface-go
         ];
       };
     };

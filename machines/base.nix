@@ -15,7 +15,7 @@
             systemd-boot.enable = true;
             efi.canTouchEfiVariables = true;
             };
-        kernelPackages = pkgs.linuxPackages_latest;
+        #kernelPackages = pkgs.linuxPackages_latest;
     };
 
   # Set your time zone.
@@ -40,6 +40,7 @@
                 sddm.enable = true;
                 autoLogin.enable = true;
                 autoLogin.user = "colin";
+                defaultSession = "plasmawayland";
             };
             desktopManager.plasma5.enable = true;
             enable = true;

@@ -60,4 +60,5 @@
         };
 
     };
+    services.xserver.xrdp = enable;
 }
