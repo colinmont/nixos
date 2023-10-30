@@ -45,7 +45,6 @@
           hardware.nixosModules.microsoft-surface-go
         ];
       };
-    };
 
     vps = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
