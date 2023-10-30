@@ -31,8 +31,7 @@
           ./machines/desktop/desktop.nix
           ./modules/bluetooth.nix
           ./machines/base.nix
-          hardware.nixosModules.common-gpu-amd
-          hardware.nixosModules.common-cpu-amd
+          ./modules/network-storage.nix
         ];
       };
 
@@ -42,7 +41,7 @@
           ./machines/go/go.nix
           ./modules/bluetooth.nix
           ./machines/base.nix
-          hardware.nixosModules.microsoft-surface-go
+          ./modules/network-storage.nix
         ];
       };
 
@@ -51,6 +50,15 @@
         modules = [
           ./machines/base.nix
           ./machines/vps/vps.nix
+        ];
+      };
+    };
+
+    server = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./machines/base.nix
+          ./machines/server/vps.nix
         ];
       };
     };

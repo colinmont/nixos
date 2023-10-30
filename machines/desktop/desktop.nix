@@ -18,7 +18,14 @@
     };
 
 
- environment.systemPackages = with pkgs; [
+ environment = {
+
+  #aliases
+  interactiveShellInit = ''
+    alias nixbuild='sudo nixos-rebuild switch --flake .#desktop'
+  '';
+
+  systemPackages = with pkgs; [
      #office
     kate
     libreoffice
@@ -41,6 +48,7 @@
     git
     btrfs-progs
     gh
+    partition-manager
 
     #web
     fluffychat
@@ -48,7 +56,8 @@
     ungoogled-chromium
     deluge
 
-  ];
+    ];
+  };
 
       programs = {
         #steam

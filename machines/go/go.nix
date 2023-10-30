@@ -11,7 +11,11 @@
       networkmanager.enable = true;
       firewall.enable = false;
     };
- environment.systemPackages = with pkgs; [
+ environment = {
+  interactiveShellInit = ''
+    alias nixbuild='sudo nixos-rebuild switch --flake .#go'
+  '';
+  systemPackages = with pkgs; [
      #office
     kate
     libreoffice

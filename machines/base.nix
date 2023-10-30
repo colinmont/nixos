@@ -15,7 +15,7 @@
             systemd-boot.enable = true;
             efi.canTouchEfiVariables = true;
             };
-        #kernelPackages = pkgs.linuxPackages_latest;
+        kernelPackages = pkgs.linuxPackages_latest;
     };
 
   # Set your time zone.
@@ -58,20 +58,12 @@
     users.users.colin = {
         isNormalUser = true;
         description = "colin";
-        extraGroups = [ "networkmanager" "wheel" ];
+        extraGroups = [ "networkmanager" "wheel" "docker" "1000" "dialout"];
     };
 
     #enable sound with pipewire
     security.rtkit.enable = true;
 
-    fileSystems."/mnt/storage" = {
-        device = "//server/storage";
-        fsType = "cifs";
-        options = let
-        # this line prevents hanging on network split
-        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,uid=colin";
-        in ["${automount_opts},credentials=/etc/nixos/secrets/smbsecrets"];
-    };
 
     nixpkgs.config.allowUnfree = true;
 
