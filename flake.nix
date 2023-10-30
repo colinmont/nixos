@@ -50,7 +50,7 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./machines/base.nix
-          ./machines/vps.nix
+          ./machines/vps/vps.nix
         ];
       };
     };
