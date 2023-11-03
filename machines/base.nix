@@ -33,6 +33,8 @@
         #Tailscale
         tailscale.enable = true;
         #enable and define xserver
+        flatpak.enable = true;
+
         xserver = {
             layout = "us";
             xkbVariant = "";
