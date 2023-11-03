@@ -80,5 +80,5 @@
           modules = [./profiles/go.nix];
       };
     };
-  };
 }
+
