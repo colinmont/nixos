@@ -52,7 +52,6 @@
           ./machines/vps/vps.nix
         ];
       };
-    };
 
     server = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
@@ -80,5 +79,5 @@
           modules = [./profiles/go.nix];
       };
     };
+  };
 }
-

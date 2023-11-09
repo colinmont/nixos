@@ -55,6 +55,7 @@
     firefox
     ungoogled-chromium
     deluge
+    chrome
 
     ];
   };

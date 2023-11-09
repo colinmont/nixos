@@ -12,8 +12,7 @@
   home.homeDirectory = "/home/colin";
 
   home.packages = with pkgs; [                              
-    ryujinx
-    yuzu    
+
     sunshine
     blender-hip
   ];
