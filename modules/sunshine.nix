@@ -19,6 +19,15 @@ in
 
   config = mkIf config.services.sunshine.enable {
 
+    boot.kernelModules = [ "uinput" ];
+
+    services = {
+        avahi = {
+          enable = true;
+          publish = { enable = true; };
+        };
+      };
+
     environment.systemPackages = [
       pkgs.sunshine
     ];
@@ -42,3 +51,5 @@ in
 
   };
 }
+
+

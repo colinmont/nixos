@@ -22,7 +22,7 @@
 
   #aliases
   interactiveShellInit = ''
-    alias nixbuild='sudo nixos-rebuild switch --flake .#desktop'
+    alias nixbuild='sudo nixos-rebuild switch --flake #desktop'
   '';
 
   systemPackages = with pkgs; [
@@ -60,15 +60,20 @@
     ];
   };
 
+
+      services = {
+        sunshine.enable = true;
+      };
       programs = {
         #steam
         steam.enable = true;
 
+        #neovim
         neovim = {
             enable = true;
             defaultEditor = true;
         };
 
+
     };
-    services.xrdp.enable = true;
 }

@@ -13,7 +13,6 @@
 
   home.packages = with pkgs; [                              
 
-    sunshine
     blender-hip
   ];
 

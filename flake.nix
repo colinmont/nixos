@@ -32,6 +32,7 @@
           ./modules/bluetooth.nix
           ./machines/base.nix
           ./modules/network-storage.nix
+          ./modules/sunshine.nix
         ];
       };
 

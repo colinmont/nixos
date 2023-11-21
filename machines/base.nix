@@ -18,6 +18,8 @@
         kernelPackages = pkgs.linuxPackages_latest;
     };
 
+  #disable pulseAudio
+  hardware.pulseaudio.enable = false;
   # Set your time zone.
     time.timeZone = "America/Halifax";
   # Select internationalisation properties.
@@ -32,9 +34,9 @@
         syncthing.enable = true;
         #Tailscale
         tailscale.enable = true;
-        #enable and define xserver
+        #enable flatpaks
         flatpak.enable = true;
-
+        #enable and define xserver
         xserver = {
             layout = "us";
             xkbVariant = "";
@@ -68,7 +70,6 @@
 
 
     nixpkgs.config.allowUnfree = true;
-
     nix.settings = {
       # Enable flakes and new 'nix' command
       experimental-features = "nix-command flakes";
@@ -77,7 +78,6 @@
     };
 
     system.stateVersion = "23.05"; # Did you read the comment?
-
   }
 
 
