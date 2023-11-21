@@ -22,7 +22,7 @@
 
   #aliases
   interactiveShellInit = ''
-    alias nixbuild='sudo nixos-rebuild switch --flake #desktop'
+    alias nixbuild='sudo nixos-rebuild switch --flake /etc/nixos#desktop'
   '';
 
   systemPackages = with pkgs; [
@@ -40,6 +40,8 @@
     neovim
     wget
     cifs-utils
+    retroarchFull
+
    # obsidian
     gparted
     kcalc
