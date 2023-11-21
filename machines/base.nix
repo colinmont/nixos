@@ -39,12 +39,12 @@
             layout = "us";
             xkbVariant = "";
             displayManager = {
-                sddm.enable = true;
+                gdm.enable = true;
                 autoLogin.enable = true;
                 autoLogin.user = "colin";
-                defaultSession = "plasmawayland";
+                defaultSession = "gnome";
             };
-            desktopManager.plasma5.enable = true;
+            desktopManager.gnome.enable = true;
             enable = true;
         };
     # Enable sound with pipewire.
