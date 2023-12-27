@@ -11,23 +11,23 @@
     ];
 
       # Define your hostname.
-    networking = {
+  networking = {
         hostName = "desktop";
         networkmanager.enable = true;
         firewall.enable = false;
     };
 
+  virtualisation.libvirtd.enable = true;
 
- environment = {
-
+  environment = {
   #aliases
-  interactiveShellInit = ''
-    alias nixbuild='sudo nixos-rebuild switch --flake /etc/nixos#desktop'
+    interactiveShellInit = ''
+      alias nixbuild='sudo nixos-rebuild switch --flake /etc/nixos#desktop'
   '';
 
+
   systemPackages = with pkgs; [
-     #office
-    kate
+    vscodium
     libreoffice
     thunderbird
 
@@ -41,19 +41,16 @@
     wget
     cifs-utils
     retroarchFull
-
-   # obsidian
-    gparted
+    virt-manager
+    comma
     kcalc
-    krdc
-    htop
+    gparted
+    btop
     git
     btrfs-progs
-    gh
-    partition-manager
 
     #web
-    fluffychat
+    beeper
     firefox
     ungoogled-chromium
     deluge
