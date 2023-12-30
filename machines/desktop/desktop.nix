@@ -35,6 +35,7 @@
     shutter
     vlc
     jellyfin-media-player
+    gimp
 
     #utils
     neovim

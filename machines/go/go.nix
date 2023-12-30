@@ -16,6 +16,7 @@
     alias nixbuild='sudo nixos-rebuild switch --flake .#go'
   '';
   systemPackages = with pkgs; [
+    vscodium
      #office
     kate
     libreoffice
