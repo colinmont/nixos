@@ -38,15 +38,11 @@
         flatpak.enable = true;
         #enable and define xserver
         xserver = {
-            layout = "us";
-            xkbVariant = "";
+            xkb.layout = "us";
             displayManager = {
-                sddm.enable = true;
-                autoLogin.enable = true;
-                autoLogin.user = "colin";
-                defaultSession = "plasma";
+                gdm.enable = true;
             };
-            desktopManager.plasma6.enable = true;
+            desktopManager.gnome.enable = true;
             enable = true;
         };
     # Enable sound with pipewire.
