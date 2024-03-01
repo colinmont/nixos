@@ -44,9 +44,9 @@
                 gdm.enable = true;
                 autoLogin.enable = true;
                 autoLogin.user = "colin";
-                defaultSession = "gnome";
+                defaultSession = "plasma";
             };
-            desktopManager.gnome.enable = true;
+            desktopManager.plasma6.enable = true;
             enable = true;
         };
     # Enable sound with pipewire.
