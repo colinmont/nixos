@@ -41,7 +41,7 @@
             layout = "us";
             xkbVariant = "";
             displayManager = {
-                gdm.enable = true;
+                sddm.enable = true;
                 autoLogin.enable = true;
                 autoLogin.user = "colin";
                 defaultSession = "plasma";

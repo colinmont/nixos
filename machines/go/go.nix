@@ -9,7 +9,7 @@
     networking = {
       hostName = "go";
       networkmanager.enable = true;
-      firewall.enable = false;
+    firewall.enable = false;
     };
  environment = {
   interactiveShellInit = ''
@@ -43,10 +43,8 @@
     #web
     fluffychat
     firefox
-
-
-  ];
-
+ ];
+};
       programs = {
 
         neovim = {
@@ -55,5 +53,4 @@
         };
 
     };
-  };
  }
