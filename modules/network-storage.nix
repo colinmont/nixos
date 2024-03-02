@@ -20,8 +20,8 @@
         in ["${automount_opts},credentials=/etc/nixos/secrets/smbsecrets"];
     };
 
-    fileSystems."/mnt/media/media" = {
-        device = "//server/media";
+    fileSystems."/mnt/media" = {
+        device = "//server/media/media";
         fsType = "cifs";
         options = let
         # this line prevents hanging on network split
