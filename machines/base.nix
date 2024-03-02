@@ -40,9 +40,12 @@
         xserver = {
             xkb.layout = "us";
             displayManager = {
-                gdm.enable = true;
+                gdm.enable = false;
+                sddm.enable = true
             };
-            desktopManager.gnome.enable = true;
+            desktopManager.gnome.enable = false;
+            desktopManager.plasma6.enable = true
+
             enable = true;
         };
     # Enable sound with pipewire.
@@ -73,7 +76,7 @@
       auto-optimise-store = true;
     };
 
-    system.stateVersion = "23.05"; # Did you read the comment?
+    system.stateVersion = "23.05"; # Do not change
   }
 
 
