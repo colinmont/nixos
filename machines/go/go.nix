@@ -28,8 +28,8 @@
     jellyfin-media-player
 
     #utils
-    neovim
     wget
+    micro
 
     cifs-utils
    # obsidian
