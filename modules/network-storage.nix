@@ -20,7 +20,7 @@
         in ["${automount_opts},credentials=/etc/nixos/secrets/smbsecrets"];
     };
 
-    fileSystems."/mnt/media" = {
+    fileSystems."/mnt/media/media" = {
         device = "//server/media";
         fsType = "cifs";
         options = let
