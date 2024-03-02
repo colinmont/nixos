@@ -41,11 +41,10 @@
             xkb.layout = "us";
             displayManager = {
                 gdm.enable = false;
-                sddm.enable = true
+                sddm.enable = true;
             };
             desktopManager.gnome.enable = false;
-            desktopManager.plasma6.enable = true
-
+            desktopManager.plasma6.enable = true;
             enable = true;
         };
     # Enable sound with pipewire.
