@@ -13,7 +13,7 @@
     };
  environment = {
   interactiveShellInit = ''
-    alias nixbuild='sudo nixos-rebuild switch --flake .#go'
+    alias nixbuild='sudo nixos-rebuild switch --flake /etc/nixos#go'
   '';
   systemPackages = with pkgs; [
     vscodium
