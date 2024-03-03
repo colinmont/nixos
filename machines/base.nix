@@ -81,7 +81,7 @@
             dates = "weekly";
             options = "+5"
         };
-
+};
 
     system.stateVersion = "23.05"; # Do not change
   }
