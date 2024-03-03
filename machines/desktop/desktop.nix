@@ -68,12 +68,6 @@
         #steam
         steam.enable = true;
 
-        #neovim
-        neovim = {
-            enable = true;
-            defaultEditor = true;
-        };
-
 
     };
 }
