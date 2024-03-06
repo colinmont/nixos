@@ -49,6 +49,7 @@
     btop
     git
     btrfs-progs
+    cura
 
     #web
     beeper
