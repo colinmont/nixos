@@ -50,6 +50,7 @@
     git
     btrfs-progs
     cura
+    lutris
 
     #web
     beeper
