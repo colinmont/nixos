@@ -50,7 +50,6 @@
     git
     btrfs-progs
     cura
-    lutris
 
     #web
     beeper
@@ -69,6 +68,7 @@
       programs = {
         #steam
         steam.enable = true;
+        virt-manager.enable = true;
 
 
     };
