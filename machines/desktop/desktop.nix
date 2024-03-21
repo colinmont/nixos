@@ -42,7 +42,6 @@
     wget
     cifs-utils
     retroarchFull
-    virt-manager
     comma
     kcalc
     gparted
@@ -69,7 +68,5 @@
         #steam
         steam.enable = true;
         virt-manager.enable = true;
-
-
     };
 }
