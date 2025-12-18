@@ -11,6 +11,8 @@
       networkmanager.enable = true;
     firewall.enable = false;
     };
+
+  hardware.sensor.iio.enable = true;
  environment = {
   interactiveShellInit = ''
     alias nixbuild='sudo nixos-rebuild switch --flake /etc/nixos#go'
@@ -21,36 +23,41 @@
     kate
     libreoffice
     thunderbird
-
+    nix-search-cli
      #media
-    shutter
     vlc
     jellyfin-media-player
+    runescape
+    maliit-keyboard
 
     #utils
     wget
-    micro
     beeper
     obsidian
     gparted
     kcalc
-    krdc
-    htop
     btrfs-progs
     git
+    #orca-slicer
 
     #web
-    fluffychat
+    #fluffychat
     firefox
-    beeper
+    chromium
+    sidequest
+    bambu-studio
  ];
 };
+users.users.colin.extraGroups = [ "adbusers" "kvm" ];
       programs = {
-
-        neovim = {
+      adb.enable = true;
+      steam.enable = true;
+      neovim = {
             enable = true;
             defaultEditor = true;
         };
 
     };
+
+
  }

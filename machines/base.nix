@@ -15,23 +15,25 @@
             systemd-boot.enable = true;
             efi.canTouchEfiVariables = true;
             };
-        kernelPackages = pkgs.linuxPackages_latest;
+        kernelPackages = pkgs.linuxPackages_6_11;
     };
 
-  #disable pulseAudio
-  hardware.pulseaudio.enable = false;
+
+
   # Set your time zone.
     time.timeZone = "America/Halifax";
   # Select internationalisation properties.
     i18n.defaultLocale = "en_CA.UTF-8";
 
     services = {
+        #disable pulseAudio
+        pulseaudio.enable = false;
         #CUPS
         printing.enable = true;
         #SSH Daemon
         openssh.enable = true;
         #syncthing
-        syncthing.enable = true;
+        syncthing.enable = false;
         #Tailscale
         tailscale.enable = true;
         #enable flatpaks
