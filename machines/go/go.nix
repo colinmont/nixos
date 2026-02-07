@@ -1,63 +1,78 @@
- { config, pkgs, ... }:
+{ config, pkgs, ... }:
 
- {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+{
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
-    networking = {
-      hostName = "go";
-      networkmanager.enable = true;
+  networking = {
+    hostName = "go";
+    networkmanager.enable = true;
     firewall.enable = false;
+  };
+
+  hardware = {
+    sensor.iio.enable = true;
+
+    # Enable support for touchscreen and stylus
+    enableAllFirmware = true;
+    enableAllHardware = true;
+
+    # Install libinput for better input device handling
+    #libinput.enable = true;
+  };
+
+  #powerManagement = {
+    # Enable TLP for better battery life
+    #enable = true;
+    #tlp.enable = true;
+  #};
+
+  environment = {
+    interactiveShellInit = ''
+      alias nixbuild='sudo nixos-rebuild switch --flake /etc/nixos#go'
+    '';
+    systemPackages = with pkgs; [
+      vscode
+
+      # office
+      #kate
+      libreoffice
+
+      # media
+      vlc
+      jellyfin-media-player
+
+      # utils
+      wget
+      beeper
+      obsidian
+      gparted
+      #kcalc
+      btrfs-progs
+      git
+      
+      claude-code
+
+      # web
+      firefox
+      chromium
+      sidequest
+
+      # Surface-specific tools
+      iptsd
+    ];
+  };
+
+  users.users.colin.extraGroups = [ "adbusers" "kvm" ];
+
+  programs = {
+    #adb.enable = true;
+    steam.enable = true;
+    neovim = {
+      enable = true;
+      defaultEditor = true;
     };
-
-  hardware.sensor.iio.enable = true;
- environment = {
-  interactiveShellInit = ''
-    alias nixbuild='sudo nixos-rebuild switch --flake /etc/nixos#go'
-  '';
-  systemPackages = with pkgs; [
-    vscodium
-     #office
-    kate
-    libreoffice
-    thunderbird
-    nix-search-cli
-     #media
-    vlc
-    jellyfin-media-player
-    runescape
-    maliit-keyboard
-
-    #utils
-    wget
-    beeper
-    obsidian
-    gparted
-    kcalc
-    btrfs-progs
-    git
-    #orca-slicer
-
-    #web
-    #fluffychat
-    firefox
-    chromium
-    sidequest
-    bambu-studio
- ];
-};
-users.users.colin.extraGroups = [ "adbusers" "kvm" ];
-      programs = {
-      adb.enable = true;
-      steam.enable = true;
-      neovim = {
-            enable = true;
-            defaultEditor = true;
-        };
-
-    };
-
-
- }
+  };
+}
