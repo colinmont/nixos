@@ -51,7 +51,7 @@
       #kcalc
       btrfs-progs
       git
-      
+      nodejs      
       claude-code
 
       # web
@@ -61,6 +61,7 @@
 
       # Surface-specific tools
       iptsd
+      onboard
     ];
   };
 
