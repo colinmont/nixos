@@ -23,11 +23,10 @@
     #libinput.enable = true;
   };
 
-  #powerManagement = {
-    # Enable TLP for better battery life
-    #enable = true;
-    #tlp.enable = true;
-  #};
+  services = {
+    tlp.enable = true;
+    power-profiles-daemon.enable = false;
+  };
 
   environment = {
     interactiveShellInit = ''
