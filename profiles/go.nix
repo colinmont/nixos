@@ -54,10 +54,10 @@
       # Navigation
       ".." = "cd ..";
       "..." = "cd ../..";
-      "ll" = "exa -la --group-directories-first";
-      "la" = "exa -a --group-directories-first";
-      "ls" = "exa --group-directories-first";
-      "lt" = "exa -la --tree --level=2";
+      "ll" = "eza -la --group-directories-first";
+      "la" = "eza -a --group-directories-first";
+      "ls" = "eza --group-directories-first";
+      "lt" = "eza -la --tree --level=2";
       
       # Tools
       "cat" = "bat --paging=never";
@@ -178,13 +178,13 @@
   };
 
   # ============================================
-  # Eza Configuration (using exa as fallback for older home-manager)
+  # Eza Configuration
   # ============================================
-  programs.exa = {
+  programs.eza = {
     enable = true;
-    enableAliases = true;
+    enableBashIntegration = true;
+    icons = "auto";
     git = true;
-    icons = true;
   };
 
   # ============================================
