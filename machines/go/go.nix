@@ -33,6 +33,7 @@
       alias nixbuild='sudo nixos-rebuild switch --flake /etc/nixos#go'
     '';
     systemPackages = with pkgs; [
+      home-manager
       vscode-fhs
 
       # office
