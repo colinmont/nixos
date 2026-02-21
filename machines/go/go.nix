@@ -33,7 +33,7 @@
       alias nixbuild='sudo nixos-rebuild switch --flake /etc/nixos#go'
     '';
     systemPackages = with pkgs; [
-      vscode
+      vscode-fhs
 
       # office
       #kate
@@ -52,7 +52,8 @@
       btrfs-progs
       git
       nodejs      
-      claude-code
+      antigravity-fhs
+      uv
 
       # web
       firefox
