@@ -106,37 +106,40 @@
   # ============================================
   programs.git = {
     enable = true;
-    userName = "colin";
-    userEmail = "colin@example.com";  # User should update this
-    
-    extraConfig = {
+
+    settings = {
+      user = {
+        name = "colin";
+        email = "colin@mntg.ca";  # User should update this
+      };
+
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
       pull.rebase = false;
-      
+
       core = {
         editor = "nvim";
         pager = "bat --paging=always";
       };
-      
+
       diff = {
         tool = "difftastic";
         external = "difft";
       };
-      
+
       difftool = {
         prompt = false;
       };
-      
+
       merge = {
         tool = "vimdiff";
         conflictstyle = "diff3";
       };
-      
+
       color = {
         ui = true;
       };
-      
+
       alias = {
         st = "status";
         co = "checkout";
