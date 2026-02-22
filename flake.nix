@@ -1,4 +1,5 @@
  
+# Summary: Flake entrypoint that defines inputs and exposes NixOS + home-manager configs.
 {
   description = "Your new nix config";
 
@@ -22,6 +23,7 @@
   } @ inputs: let
     inherit (self) outputs;
   in {
+    # Each host is composed by combining machine files and shared modules.
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
@@ -35,6 +37,7 @@
       };
     };
 
+    # Home-manager runs separately but shares inputs via extraSpecialArgs.
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {

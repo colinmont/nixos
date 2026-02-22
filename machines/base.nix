@@ -1,15 +1,16 @@
+# Summary: Shared system defaults (locale, services, users, nix settings).
 { config, pkgs, ... }:
 
 {
 
-    #env
+    # Environment defaults for interactive shells.
     environment = {
         variables = {
         EDITOR = "nvim";
         };
     };
 
-    # Bootloader.
+    # Bootloader and firmware handling.
     boot = {
         loader = {
             systemd-boot.enable = true;
@@ -20,11 +21,12 @@
 
 
 
-  # Set your time zone.
+    # Locale and time defaults.
     time.timeZone = "America/Halifax";
   # Select internationalisation properties.
     i18n.defaultLocale = "en_CA.UTF-8";
 
+        # Core services shared across machines.
     services = {
         #disable pulseAudio
         pulseaudio.enable = false;
@@ -58,17 +60,17 @@
         };
   };
 
-    # Define a user account..
+    # Primary user definition; machines can extend extraGroups.
     users.users.colin = {
         isNormalUser = true;
         description = "colin";
         extraGroups = [ "networkmanager" "wheel" "docker" "1000" "dialout"];
     };
 
-    #enable sound with pipewire
+    # Enable realtime scheduling needed by audio.
     security.rtkit.enable = true;
 
-
+    # Nix settings and garbage collection.
     nixpkgs.config.allowUnfree = true;
     nix = {
         settings = {
@@ -85,6 +87,7 @@
         };
 };
 
+    # NixOS release compatibility marker.
     system.stateVersion = "23.05"; # Do not change
   }
 

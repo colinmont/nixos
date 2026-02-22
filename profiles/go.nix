@@ -1,3 +1,4 @@
+# Summary: Home-manager profile for user colin on host go (packages, shell, apps).
 { config, pkgs, ... }:
 
 {
@@ -67,6 +68,7 @@
       
       # Nix
       "nixbuild" = "sudo nixos-rebuild switch --flake /etc/nixos#go";
+      "nixhome" = "home-manager switch --flake /etc/nixos#colin@go";
       "nixupdate" = "nix flake update --flake /etc/nixos";
       "nixclean" = "sudo nix-collect-garbage -d";
       

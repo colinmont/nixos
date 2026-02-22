@@ -1,8 +1,9 @@
+# Summary: Bluetooth enablement module shared by machines.
 { config, pkgs, ... }:
 
 {
 
-  #hardware, bluetooth
+    # Hardware Bluetooth support and boot-time power state.
     hardware = {
         bluetooth = {
             enable = true; # enables support for Bluetooth
