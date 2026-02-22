@@ -32,6 +32,7 @@
         modules = [
           ./machines/go/go.nix
           ./modules/bluetooth.nix
+          ./modules/network-storage.nix
           ./machines/base.nix
         ];
       };
