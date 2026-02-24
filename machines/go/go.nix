@@ -40,7 +40,7 @@
     '';
     systemPackages = with pkgs; [
       home-manager
-      vscode-fhs
+      vscode
 
       # office
       #kate
@@ -58,9 +58,7 @@
       #kcalc
       btrfs-progs
       git
-      nodejs      
-      antigravity-fhs
-      uv
+
 
       # web
       firefox
