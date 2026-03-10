@@ -28,12 +28,17 @@
     tree         # Directory tree
     unzip
     p7zip
+    antigravity
+    gemini-cli
 
     # Development tools
     gh           # GitHub CLI
     lazygit      # Terminal UI for git
     difftastic   # Modern diff tool
     just         # Command runner
+
+    #remote desktop
+    remmina        # Remote desktop client
 
     # Nix tools
     nix-tree     # Browse nix store
