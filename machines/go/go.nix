@@ -40,34 +40,21 @@
     '';
     systemPackages = with pkgs; [
       home-manager
-      vscode
-
-      # office
-      #kate
+ 
       libreoffice
 
       # media
       vlc
-      jellyfin-media-player
+
 
       # utils
-      wget
-      beeper
       obsidian
-      gparted
-      #kcalc
-      btrfs-progs
-      git
-
-
       # web
       firefox
-      chromium
-      sidequest
 
       # Surface-specific tools
       iptsd
-      onboard
+
     ];
   };
 
@@ -76,8 +63,6 @@
 
   # Host-specific program enables.
   programs = {
-    #adb.enable = true;
-    steam.enable = true;
     neovim = {
       enable = true;
       defaultEditor = true;
